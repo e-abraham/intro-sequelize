@@ -22,6 +22,12 @@ describe('Restaurant Database', () => {
 		expect(testItem.name).toBe('Mango Fandango')
 	})
 
+    test("restaurants have a max occupancy", async () => {
+        const testRestaurant = await Restaurant.create({name : 'Sushi Kadan', occupancy: 100})
+        console.log(testRestaurant.dataValues)
+        expect(testRestaurant.occupancy).toBe(100)
+    })
+    
     test("restaurants have menus", async () => {
         const testRestaurant = await Restaurant.create({name : 'Sushi Kadan'})
         const testMenu = await Menu.create({name : 'Sushi Rolls'})
