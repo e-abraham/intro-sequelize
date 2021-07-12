@@ -1,5 +1,5 @@
-const {sequelize} = require("./db");
-const {Restaurant, Menu, Item } = require("./index");
+const {sequelize} = require("../src/db");
+const {Restaurant, Menu, Item } = require("../src/index");
 
 describe('Restaurant Database', () => {
 
